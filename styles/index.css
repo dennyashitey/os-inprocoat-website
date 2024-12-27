@@ -1,0 +1,813 @@
+@import url(./defaults.css);
+@import url(./navigation.css);
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* hero section */
+.hero,
+.service-hero,
+.faq-hero,
+.contact-hero {
+  padding: 0px 500px;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(135, 100, 4, 0.4)
+    ),
+    url("../assets/services.jpg");
+  background-position: center;
+  min-height: 70vh;
+}
+
+.service-hero,
+.faq-hero,
+.contact-hero {
+  display: grid;
+  place-items: center;
+}
+.service-hero .hero-text h1 {
+  color: var(--primary);
+}
+
+.service-hero .hero-text p {
+  color: white;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+  margin-block-end: 50px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.hero-text p {
+  text-align: center;
+  font-size: 18px;
+  /* letter-spacing: 3px; */
+}
+
+.hero .abs-container {
+  background-color: var(--text);
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: white;
+  width: 100%;
+}
+
+.abs-container p {
+  font-size: 16px;
+}
+
+/* product */
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 500px;
+  margin-block-end: 40px;
+}
+
+.product h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.product-info {
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+
+.product-description {
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .product-info {
+    display: flex;
+  }
+  .product-info img {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 1335px) {
+  .product-info ul {
+    list-style-type: none;
+  }
+  .product-info img {
+    width: 100%;
+  }
+}
+
+.product-info .product-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+}
+
+.product-text h3 {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.product-text ul {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-text p {
+  font-size: 16px;
+}
+
+/* whatwedo */
+.whatwedo {
+  min-height: 40vh;
+  padding: 20px 500px;
+  display: grid;
+  gap: 30px;
+  margin-block-end: 50px;
+}
+
+.whatwedo-left,
+.whatwedo-right {
+  flex: 1;
+}
+
+.whatwedo-left h2 {
+  color: var(--text);
+  font-size: 1.8rem;
+}
+
+.whatwedo-left p {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.whatwedo-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.whatwedo-right .info .more-info h3 {
+  color: var(--text);
+}
+
+.whatwedo-right .info .more-info p {
+  color: var(--text);
+}
+
+/* why us */
+.why-us {
+  padding: 20px 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.why-us h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  border-radius: 6px;
+  flex: 1;
+  /* padding: 10px; */
+}
+
+.card img {
+  max-width: 300px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 16px;
+  width: 90%;
+}
+
+/* contact */
+.contact {
+  padding: 50px 500px;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+form .top {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.fullname,
+.email,
+.subject,
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+input {
+  padding: 10px 8px;
+  font-size: 15px;
+  border: 2px solid #e6e4e8;
+  outline: none;
+}
+
+.message {
+  width: 100%;
+}
+
+textarea {
+  min-height: 200px;
+  border: 2px solid #e6e4e8;
+  outline: none;
+  padding: 5px;
+}
+
+.ylw-button {
+  align-self: end;
+}
+
+footer {
+  background-color: var(--text);
+  color: white;
+  display: grid;
+  gap: 20px;
+  padding: 20px 300px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer h3 {
+  color: var(--primary);
+}
+
+.logo-text,
+.pages,
+.contactus {
+  flex: 1;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+
+.copy {
+  background-color: var(--text);
+  color: white;
+  text-align: center;
+}
+
+/* services page */
+
+.overview {
+  padding: 50px 150px;
+  text-align: center;
+}
+
+.overview .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Services Section */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 50px 500px;
+}
+
+.service {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.service img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.service h3 {
+  margin: 15px 0;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: var(--text);
+  color: white;
+  padding: 50px 500px;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  margin-bottom: 20px;
+}
+
+.services .service img {
+  width: 100px;
+}
+
+/* Call to Action Section */
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 150px;
+}
+
+.call-to-action .ylw-button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.call-to-action .ylw-button:hover {
+  background-color: #e6b800;
+}
+
+.more {
+  text-align: center;
+  padding-block: 20px;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.more::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: var(--primary);
+  border-radius: 6px;
+}
+
+.gallery {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px 500px;
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.333% - 20px); /* Three items per row, with space for gaps */
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  display: block;
+  border-radius: 8px;
+}
+
+.gallery-item p {
+  max-width: 285px;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 50px 500px;
+}
+
+.faq h2 {
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.faq-item p {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.faq-item.active p {
+  display: block;
+}
+
+/* Contact Prompt Section */
+.contact-prompt {
+  text-align: center;
+  padding: 50px 150px;
+}
+
+.contact-prompt .ylw-button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-prompt .ylw-button:hover {
+  background-color: #e6b800;
+}
+
+/* Contact Form Section */
+.contact-form {
+  padding: 50px 150px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .top {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-form .top div {
+  flex: 1;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button.ylw-button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button.ylw-button:hover {
+  background-color: #e6b800;
+}
+
+/* Contact Details Section */
+.contact-details {
+  padding: 50px 500px;
+}
+
+.contact-details h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-info {
+    justify-content: center;
+  }
+}
+
+.contact-location {
+  flex: 1;
+}
+
+.contact-location h3 {
+  margin-bottom: 10px;
+}
+
+.contact-location p {
+  margin-bottom: 5px;
+}
+
+/* Map Section */
+.map {
+  padding: 50px 150px;
+  text-align: center;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+@media screen and (max-width: 1800px) {
+  nav,
+  .hero,
+  .product,
+  .whatwedo,
+  .why-us,
+  .contact,
+  .services,
+  .overview,
+  .why-choose-us,
+  .call-to-action,
+  .map,
+  .contact-details,
+  .faq,
+  .contact-prompt,
+  .service-hero,
+  .gallery,
+  .faq-hero,
+  .contact-hero,
+  .gallery-container,
+  footer {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .gallery-container {
+    padding: 20px 100px;
+  }
+}
+
+@media screen and (max-width: 1355px) {
+  nav,
+  .hero,
+  .product,
+  .whatwedo,
+  .why-us,
+  .contact,
+  .services,
+  .overview,
+  .why-choose-us,
+  .call-to-action,
+  .map,
+  .contact-details,
+  .faq,
+  .contact-prompt,
+  .service-hero,
+  .gallery,
+  .faq-hero,
+  .contact-hero,
+  .gallery-container,
+  footer {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .gallery-container {
+    padding: 20px 100px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  nav,
+  .hero,
+  .product,
+  .whatwedo,
+  .why-us,
+  .contact,
+  .services,
+  .overview,
+  .why-choose-us,
+  .call-to-action,
+  .map,
+  .contact-details,
+  .faq,
+  .contact-prompt,
+  .service-hero,
+  .gallery,
+  .faq-hero,
+  .contact-hero,
+  .gallery-container,
+  footer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  nav,
+  .hero,
+  .product,
+  .whatwedo,
+  .why-us,
+  .contact,
+  .services,
+  .overview,
+  .why-choose-us,
+  .call-to-action,
+  .map,
+  .contact-details,
+  .faq,
+  .contact-prompt,
+  .service-hero,
+  .gallery,
+  .faq-hero,
+  .contact-hero,
+  .gallery-container,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .hero,
+  .service-hero,
+  .contact-hero,
+  .faq-hero {
+    min-height: 60vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero .hero-text {
+    width: 100%;
+  }
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+    letter-spacing: none;
+  }
+  .product-description p {
+    font-size: 14px;
+  }
+  .abs-container p {
+    font-size: 16px;
+  }
+  .product h2,
+  .whatwedo-left h2,
+  .contact h2,
+  .why-us h2 {
+    font-size: 1.5rem;
+  }
+  .product-text h3,
+  .more-info h3,
+  .card h3,
+  footer h3 {
+    font-size: 1rem;
+  }
+  .abs-container p,
+  .product-text p,
+  .product-text ul,
+  .hero-text p,
+  .contact p,
+  .card p,
+  .whatwedo-left p,
+  .more-info p,
+  footer .logo-text p {
+    font-size: 14px;
+  }
+  .card img {
+    max-width: 320px;
+  }
+  .card {
+    margin-bottom: 15px;
+    flex: 1;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  footer {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 20px); /* Two items per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 10px); /* Two items per row on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 100%; /* One item per row on very small screens */
+  }
+}
